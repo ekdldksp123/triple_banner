@@ -5,6 +5,7 @@ import React from "react";
 import { PopularityProps } from "../types/props";
 import { useSpring, animated, easings  } from "react-spring";
 import { fadeIn } from "../styles/common";
+import Awards from "./awards";
 
 const Popularity:React.FC<PopularityProps> = ({ numberOfTravelers, numberOfReviews, numberOfSchedules }) => {
     
@@ -50,6 +51,10 @@ const Popularity:React.FC<PopularityProps> = ({ numberOfTravelers, numberOfRevie
                     </animated.span>만 개
                 </span>의 여행 일정
             </Item>
+            <Awards 
+                google={["2018 구글 플레이스토어","올해의 앱 최우수상 수상"]} 
+                apple={["2018 애플 앱스토어","오늘의 여행앱 선정"]}
+            />
         </Container>
     )
 }
@@ -61,7 +66,7 @@ const Container = styled.div`
     display: flex;
     justify-content: center;
     flex-direction: column;
-    text-align:center;
+    text-align:left;
     padding-top:150px;
     margin-left:623px;
 

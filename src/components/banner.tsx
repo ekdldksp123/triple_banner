@@ -2,6 +2,7 @@
 import { css, keyframes } from "@emotion/react";
 import styled from '@emotion/styled';
 import React from "react";
+import Awards from "./awards";
 import Logo from "./logo";
 import Popularity from "./popularity";
 
@@ -38,7 +39,5 @@ const Section = styled.div`
     min-width: 1200px;
     max-width: 100vw;
     height: 552px;
-    display: flex;
-    justify-content: space-between;
 `
 
