@@ -1,3 +1,10 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": [
+    "@titicaca/eslint-config-triple",
+    "@titicaca/eslint-config-triple/frontend"
+  ],
+  "rules": {
+    "react/jsx-key": "off", //key 검사 제거하려면 이 옵션을 off 시켜줘야 함!
+    "react/no-unescaped-entities": "off"
+  }
 }
