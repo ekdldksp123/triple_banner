@@ -1,7 +1,10 @@
-const { extends: extendConfigs, overrides } = createConfig({ type: 'frontend', project: './tsconfig.json' })
+const createConfig = require('@titicaca/eslint-config-triple/create-config');
+const { extends: extendConfigs, overrides } = createConfig({ type: 'frontdend', project: './tsconfig.json' });
 
 module.exports = {
   extends: [
+    "@titicaca/eslint-config-triple",
+    "@titicaca/eslint-config-triple/frontend",
     ...extendConfigs,
   ],
   overrides: [

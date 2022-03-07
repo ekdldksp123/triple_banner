@@ -8,7 +8,7 @@ export const animateValue = (setValue:(v:number) => void, start:number, end:numb
 
     const counter = () => {
         frame++;
-        const progress = easeOutQuad(frame / totalFrames);
+        const progress = easeOutCubic(frame / totalFrames);
         const currentCount = Math.round(end * progress);
         
         if(start !== currentCount) setValue(currentCount);
@@ -20,5 +20,4 @@ export const animateValue = (setValue:(v:number) => void, start:number, end:numb
     window.requestAnimationFrame(counter);
 }
 
-const easeOutQuad = (t:number) => t * ( 2 - t );
-
+const easeOutCubic = (t:number) =>  1 - Math.pow(1 - t, 3);
