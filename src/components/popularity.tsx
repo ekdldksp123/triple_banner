@@ -1,54 +1,40 @@
-/** @jsxImportSource @emotion/react */
-import { css, keyframes } from "@emotion/react";
 import styled from '@emotion/styled';
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { PopularityProps } from "../types/props";
-import { useSpring, animated, easings  } from "react-spring";
 import { fadeIn } from "../styles/common";
 import Awards from "./awards";
+import { animateValue } from "../lib/counter";
+import { keyframes } from '@emotion/react';
 
 const Popularity:React.FC<PopularityProps> = ({ numberOfTravelers, numberOfReviews, numberOfSchedules }) => {
     
-    const { travelers, reviews, schedules } = useSpring({
-        travelers: 0,
-        reviews: 0,
-        schedules: 0,
-        from: {
-            opacity: 0,
-            travelers: 0,
-            reviews: 0,
-            schedules: 0,
-        },
-        to: { 
-            opacity: 1,
-            travelers: numberOfTravelers,
-            reviews: numberOfReviews,
-            schedules: numberOfSchedules
-        },
-        config: { duration: 2000, easing: easings.easeInOutQuad }
-    });
+    const [travelers, setTravlers] = useState<number>(0);
+    const [reviews, setReviews] = useState<number>(0);
+    const [schedules, setSchedules] = useState<number>(0);
 
+    useEffect(() => {
+        if(window) {
+            animateValue(setTravlers, travelers, numberOfTravelers, 2000);
+            animateValue(setReviews, reviews, numberOfReviews, 2000);
+            animateValue(setSchedules, schedules, numberOfSchedules, 2000);
+        }
+    },[]);
+  
     return (
         <Container>
             <Item>
                 <span>
-                    <animated.span>
-                        { travelers.to((travelers) => Math.floor(travelers)) }
-                    </animated.span>만 명
+                    {travelers}만 명
                 </span>의 여행자
             </Item>
             <Item>
                 <span>
-                    <animated.span>
-                        { reviews.to((reviews) => Math.floor(reviews)) }
-                    </animated.span>만 개
+                    {reviews}만 개
                 </span>의 여행 리뷰
             </Item>
             <Item>
                 <span>
-                    <animated.span>
-                        { schedules.to((schedules) => Math.floor(schedules)) }
-                    </animated.span>만 개
+                    {schedules}만 개
                 </span>의 여행 일정
             </Item>
             <Awards 
@@ -70,11 +56,11 @@ const Container = styled.div`
     padding-top:150px;
     margin-left:623px;
 
-    -webkit-animation: ${fadeIn} 700ms ease-in-out 300ms;
-    -moz-animation: ${fadeIn} 700ms ease-in-out 300ms;
-    -ms-animation: ${fadeIn} 700ms ease-in-out 300ms;
-    -o-animation: ${fadeIn} 700ms ease-in-out 300ms;
-    animation:${fadeIn} 700ms ease-in-out 300ms;
+    -webkit-animation: ${fadeIn} 700ms ease-in-out 200ms;
+    -moz-animation: ${fadeIn} 700ms ease-in-out 200ms;
+    -ms-animation: ${fadeIn} 700ms ease-in-out 200ms;
+    -o-animation: ${fadeIn} 700ms ease-in-out 200ms;
+    animation:${fadeIn} 700ms ease-in-out 200ms;
 `
 
 const Item = styled.div`

@@ -19,7 +19,10 @@
 - 웹 최적화를 위해 analytics.js 스크립트 import (custom hook 사용)
 - banner, logo, popularity, awards 컴포넌트 추가
 - fadeIn 애니메이션 적용
-- 숫자 증가 애니메이션 구현중...
+
+### _2022-03-08_
+- 숫자 증가 애니메이션 구현하긴 했지만 easeOut 이 티가 잘 안남
+
 
 
 

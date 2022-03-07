@@ -27,9 +27,9 @@ const Content = styled.section`
     font-family: sans-serif;
     color: rgba(58, 58, 58, 0.7);
 
-    -webkit-animation: ${fadeIn} 700ms ease-in-out 500ms;
-    -moz-animation: ${fadeIn} 700ms ease-in-out 500ms;
-    -ms-animation: ${fadeIn} 700ms ease-in-out 500ms;
-    -o-animation: ${fadeIn} 700ms ease-in-out 500ms;
-    animation:${fadeIn} 700ms ease-in-out 500ms;
+    -webkit-animation: ${fadeIn} 700ms ease-in-out 100ms;
+    -moz-animation: ${fadeIn} 700ms ease-in-out 100ms;
+    -ms-animation: ${fadeIn} 700ms ease-in-out 100ms;
+    -o-animation: ${fadeIn} 700ms ease-in-out 100ms;
+    animation:${fadeIn} 700ms ease-in-out 100ms;
 `

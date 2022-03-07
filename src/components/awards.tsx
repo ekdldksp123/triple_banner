@@ -1,5 +1,3 @@
-/** @jsxImportSource @emotion/react */
-import { css, keyframes } from "@emotion/react";
 import styled from '@emotion/styled';
 import { fadeIn } from "../styles/common";
 import { AwardsProps } from "../types/props";
@@ -18,14 +16,14 @@ export default Awards;
 const Container = styled.div`
     white-space:nowrap;
     width:300px;
-    margin:50px auto 80px auto;
+    margin:50px auto 80px 0;
     text-align:left;
 
-    -webkit-animation: ${fadeIn} 700ms ease-in-out 500ms;
-    -moz-animation: ${fadeIn} 700ms ease-in-out 500ms;
-    -ms-animation: ${fadeIn} 700ms ease-in-out 500ms;
-    -o-animation: ${fadeIn} 700ms ease-in-out 500ms;
-    animation:${fadeIn} 700ms ease-in-out 500ms;
+    -webkit-animation: ${fadeIn} 700ms ease-in-out 300ms;
+    -moz-animation: ${fadeIn} 700ms ease-in-out 300ms;
+    -ms-animation: ${fadeIn} 700ms ease-in-out 300ms;
+    -o-animation: ${fadeIn} 700ms ease-in-out 300ms;
+    animation:${fadeIn} 700ms ease-in-out 300ms;
 `
 
 const GoogleItem = styled.div`
