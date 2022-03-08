@@ -1,5 +1,5 @@
 /** @jsxImportSource @emotion/react */
-import { css, keyframes } from "@emotion/react";
+import { keyframes } from '@emotion/react'
 
 export const fadeIn = keyframes`
     from {

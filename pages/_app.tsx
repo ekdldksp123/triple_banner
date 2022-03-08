@@ -1,7 +1,9 @@
 import type { AppProps } from 'next/app'
 import Head from 'next/head'
+
 import { globalCss } from '../styles/globals'
 
+/* eslint-disable @typescript-eslint/naming-convention */
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>

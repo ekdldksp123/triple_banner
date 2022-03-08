@@ -1,14 +1,14 @@
 export interface LogoProps {
-    referenceDate:string,
+  referenceDate: string
 }
 
 export interface PopularityProps {
-    numberOfTravelers: number,
-    numberOfReviews: number,
-    numberOfSchedules: number,
+  numberOfTravelers: number
+  numberOfReviews: number
+  numberOfSchedules: number
 }
 
 export interface AwardsProps {
-    google: string[],
-    apple: string[],
+  google: string[]
+  apple: string[]
 }

@@ -10,7 +10,7 @@ const nextConfig = {
     loader: 'akamai',
     path: '',
     formats: ['image/avif', 'image/webp'],
-    deviceSizes : [ 1200 , 1920 , 2048 , 3840 ],
+    deviceSizes: [1200, 1920, 2048, 3840],
   },
 }
 
