@@ -22,7 +22,7 @@ const Content = styled.section`
   font-size: 15px;
 
   box-sizing: border-box;
-  background-image: url('../../images/triple@2x.png');
+  background-image: url('../../triple_banner/images/triple@2x.png');
   background-repeat: no-repeat;
   text-align: center;
   font-family: sans-serif;
