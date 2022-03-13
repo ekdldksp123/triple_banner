@@ -24,7 +24,7 @@ const Content = styled.section`
 
   box-sizing: border-box;
   background-image: url(${({ isProd }: { isProd: boolean }) =>
-    isProd ? '/tripple_banner/images/triple@2x.png' : '/images/triple@2x.png'});
+    isProd ? '/triple_banner/images/triple@2x.png' : '/images/triple@2x.png'});
   background-repeat: no-repeat;
   text-align: center;
   font-family: sans-serif;
