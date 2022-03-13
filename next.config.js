@@ -8,7 +8,6 @@ const nextConfig = {
   staticPageGenerationTimeout: 120,
   images: {
     loader: 'akamai',
-    path: '',
     formats: ['image/avif', 'image/webp'],
     deviceSizes: [1200, 1920, 2048, 3840],
   },

@@ -1,4 +1,5 @@
 import styled from '@emotion/styled'
+import Image from 'next/image'
 
 import { fadeIn } from '../styles/common'
 import { AwardsProps } from '../types/props'
@@ -36,13 +37,12 @@ const Container = styled.div`
   -o-animation: ${fadeIn} 700ms ease-in-out 300ms;
   animation: ${fadeIn} 700ms ease-in-out 300ms;
 `
-
 const GoogleItem = styled.div`
   display: inline-block;
   font-family: sans-serif;
   font-weight: bold;
   font-size: 14px;
-  background-image: url(/images/play-store@2x.png);
+  background-image: url("/images/play-store@2x.png");
   background-position: left top;
   background-repeat: no-repeat;
   color: rgba(58, 58, 58, 0.8);
@@ -63,7 +63,7 @@ const AppleItem = styled.div`
   font-family: sans-serif;
   font-weight: bold;
   font-size: 14px;
-  background-image: url(/images/app-store@2x.png);
+  background-image: url("/images/app-store@2x.png");
   background-position: left top;
   background-repeat: no-repeat;
   color: rgba(58, 58, 58, 0.8);
