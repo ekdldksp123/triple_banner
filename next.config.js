@@ -8,6 +8,7 @@ const nextConfig = {
   staticPageGenerationTimeout: 120,
   images: {
     loader: 'akamai',
+    path: isProd ? 'https://ekdldksp123.github.io/triple_banner/' : '',
     formats: ['image/avif', 'image/webp'],
     deviceSizes: [1200, 1920, 2048, 3840],
   },
