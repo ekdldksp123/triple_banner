@@ -42,7 +42,7 @@ const GoogleItem = styled.div`
   font-family: sans-serif;
   font-weight: bold;
   font-size: 14px;
-  background-image: url(../../images/play-store@2x.png);
+  background-image: url(/images/play-store@2x.png);
   background-position: left top;
   background-repeat: no-repeat;
   color: rgba(58, 58, 58, 0.8);
@@ -63,7 +63,7 @@ const AppleItem = styled.div`
   font-family: sans-serif;
   font-weight: bold;
   font-size: 14px;
-  background-image: url(../../images/app-store@2x.png);
+  background-image: url(/images/app-store@2x.png);
   background-position: left top;
   background-repeat: no-repeat;
   color: rgba(58, 58, 58, 0.8);
