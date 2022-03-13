@@ -7,7 +7,8 @@ import { LogoProps } from '../types/props'
 /* eslint-disable @typescript-eslint/no-use-before-define */
 
 const Logo: React.FC<LogoProps> = ({ referenceDate }) => {
-  return <Content>{`${referenceDate} 기준`}</Content>
+  const isProd = process.env.NODE_ENV === 'production'
+  return <Content isProd={isProd}>{`${referenceDate} 기준`}</Content>
 }
 
 export default Logo
@@ -22,7 +23,8 @@ const Content = styled.section`
   font-size: 15px;
 
   box-sizing: border-box;
-  background-image: url('../../triple_banner/images/triple@2x.png');
+  background-image: url(${({ isProd }: { isProd: boolean }) =>
+    isProd ? '/tripple_banner/images/triple@2x.png' : '/images/triple@2x.png'});
   background-repeat: no-repeat;
   text-align: center;
   font-family: sans-serif;

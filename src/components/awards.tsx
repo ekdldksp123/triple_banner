@@ -1,4 +1,5 @@
 import styled from '@emotion/styled'
+import React from 'react'
 
 import { fadeIn } from '../styles/common'
 import { AwardsProps } from '../types/props'
@@ -6,15 +7,16 @@ import { AwardsProps } from '../types/props'
 /* eslint-disable @typescript-eslint/no-use-before-define */
 
 const Awards: React.FC<AwardsProps> = ({ google, apple }) => {
+  const isProd = process.env.NODE_ENV === 'production'
+
   return (
     <Container>
-      <GoogleItem>
+      <GoogleItem isProd={isProd}>
         {google[0]}
         <br />
         {google[1]}
       </GoogleItem>
-      <GoogleItem></GoogleItem>
-      <AppleItem>
+      <AppleItem isProd={isProd}>
         {apple[0]}
         <br />
         {apple[1]}
@@ -43,7 +45,10 @@ const GoogleItem = styled.div`
   font-family: sans-serif;
   font-weight: bold;
   font-size: 14px;
-  background-image: url('../../triple_banner/images/play-store@2x.png');
+  background-image: url(${({ isProd }: { isProd: boolean }) =>
+    isProd
+      ? '/triple_banner/images/play-store@2x.png'
+      : '/images/play-store@2x.png'});
   background-position: left top;
   background-repeat: no-repeat;
   color: rgba(58, 58, 58, 0.8);
@@ -63,7 +68,10 @@ const AppleItem = styled.div`
   font-family: sans-serif;
   font-weight: bold;
   font-size: 14px;
-  background-image: url('../../triple_banner/images/app-store@2x.png');
+  background-image: url(${({ isProd }: { isProd: boolean }) =>
+    isProd
+      ? '/triple_banner/images/app-store@2x.png'
+      : '/images/app-store@2x.png'});
   background-position: left top;
   background-repeat: no-repeat;
   color: rgba(58, 58, 58, 0.8);
