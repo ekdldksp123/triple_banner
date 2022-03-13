@@ -13,6 +13,9 @@ const Awards: React.FC<AwardsProps> = ({ google, apple }) => {
         <br />
         {google[1]}
       </GoogleItem>
+      <GoogleItem>
+
+      </GoogleItem>
       <AppleItem>
         {apple[0]}
         <br />
@@ -25,6 +28,7 @@ const Awards: React.FC<AwardsProps> = ({ google, apple }) => {
 export default Awards
 
 const Container = styled.div`
+  display: flex;
   white-space: nowrap;
   width: 300px;
   margin: 50px auto 80px 0;
@@ -56,7 +60,6 @@ const GoogleItem = styled.div`
     margin-right: 28.5px;
   }
 `
-
 const AppleItem = styled.div`
   display: inline-block;
   font-family: sans-serif;
