@@ -13,7 +13,6 @@ function MyApp({ Component, pageProps }: AppProps) {
         <meta httpEquiv="X-UA-Compatible" content="IE=Edge" />
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta httpEquiv="Content-Security-Policy" content="upgrade-insecure-requests" />
         <style>{globalCss}</style>
       </Head>
       <Component {...pageProps} />
