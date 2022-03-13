@@ -13,9 +13,7 @@ const Awards: React.FC<AwardsProps> = ({ google, apple }) => {
         <br />
         {google[1]}
       </GoogleItem>
-      <GoogleItem>
-
-      </GoogleItem>
+      <GoogleItem></GoogleItem>
       <AppleItem>
         {apple[0]}
         <br />
